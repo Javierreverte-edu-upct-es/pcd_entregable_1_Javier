@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>49</x>
+      <y>567</y>
+      <w>147</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+Ubicacion
+--
+ENDOR
+CUMULO_RAIMOS
+NEBULOSA_KALIIDA</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>245</x>
+      <y>560</y>
+      <w>147</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+ClaseNave
+--
+EJECUTOR
+ECLIPSE
+SOBERANO</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>294</x>
+      <y>126</y>
+      <w>147</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+UnidadCombate
+--
++ identificador_combate : str
++ clave_cifrada : int
+--
++ mostrar_info()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>294</x>
+      <y>287</y>
+      <w>147</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Nave
+--
++ nombre : str
++ catalogo_repuestos : list
+--
++ agregar_repuesto()
++ mostrar_catalogo()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>63</x>
+      <y>420</y>
+      <w>147</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>EstacionEspacial
+--
++ tripulacion : int
++ pasaje : int
++ ubicacion : Ubicacion
+--
++ mostrar_info()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>791</x>
+      <y>609</y>
+      <w>147</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>Repuesto
+--
++ nombre : str
++ proveedor : str
+- cantidad : int
++ precio : float
+--
++ agregar_stock()
++ retirar_stock()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>791</x>
+      <y>420</y>
+      <w>147</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>Almacen
+--
++ nombre : str
++ ubicacion : str
++ catalogo : list
+--
++ agregar_repuesto()
++ buscar_repuesto()
++ mostrar_catalogo()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>238</x>
+      <y>427</y>
+      <w>147</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>NaveEstelar
+--
++ tripulacion : int
++ pasaje : int
++ clase : ClaseNave
+--
++ mostrar_info()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>413</x>
+      <y>455</y>
+      <w>147</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>CazaEstelar
+--
++ dotacion : int
+--
++ mostrar_info()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>756</x>
+      <y>105</y>
+      <w>147</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+Usuario
+--
++ nombre : str</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>917</x>
+      <y>273</y>
+      <w>147</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>Comandante
+--
++ comprar_repuesto()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>679</x>
+      <y>273</y>
+      <w>147</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>OperarioAlmacen
+--
++ agregar_repuesto()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>322</x>
+      <y>357</y>
+      <w>42</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1..n
+m2=1..m</panel_attributes>
+    <additional_attributes>20.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>175</x>
+      <y>336</y>
+      <w>133</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1..m
+m2=1..n</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>413</x>
+      <y>357</y>
+      <w>91</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1..m
+m2=1..n</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>357</x>
+      <y>196</y>
+      <w>21</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>147</y>
+      <w>168</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1..n
+m2=1..m</panel_attributes>
+    <additional_attributes>10.0;10.0;220.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>763</x>
+      <y>147</y>
+      <w>77</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1..n
+m2=1..m</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>112</x>
+      <y>490</y>
+      <w>21</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>315</x>
+      <y>504</y>
+      <w>21</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>854</x>
+      <y>511</y>
+      <w>42</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=0..1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;20.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>763</x>
+      <y>308</y>
+      <w>105</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..n
+m2=1..m
+</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>903</x>
+      <y>301</y>
+      <w>112</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..n
+m2=0..m
+</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+</diagram>

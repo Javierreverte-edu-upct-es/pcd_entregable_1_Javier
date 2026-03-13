@@ -86,7 +86,7 @@ class Repuesto:
     def __init__(self, nombre, proveedor, cantidad, precio):
         self.nombre = nombre
         self.proveedor = proveedor
-        self._cantidad = cantidad
+        self._cantidad = cantidad #privado
         self.precio = precio
 
     def agregar_stock(self, cantidad):
